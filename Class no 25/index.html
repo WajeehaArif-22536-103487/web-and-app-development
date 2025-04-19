@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <div class="btn">
+    <button onclick="add()" >add</button></div>
+    <script>
+           let x=['wajeeha',17,15.19,true];
+           console.log(x) 
+        //json(Javascript object Notation) 
+        let y = {
+            "name": "Wajeeha",
+            "Rollno": 36,
+            "password": 15455445
+        };
+        document.getElementById('demo').innerHTML = y;
+           console.log(y);
+           let value =45
+           let des = `value of: ${value}`
+           console.log(des)
+           console.log("value is",value)
+        function add (){
+           let a=54,b=5,c;
+            c=a+b;
+            document.getElementById('demo').innerHTML = c;
+            console.log(c);
+        }
+        add()
+        //parameter,arguments
+        function user (a,b){
+            console.log(a,b)
+        }
+        user("ali",56)
+
+
+        // primitive non primitive
+        // window Object
+        // browser console
+        // dom
+    </script>
+</body>
+
+</html>

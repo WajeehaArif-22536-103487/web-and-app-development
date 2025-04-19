@@ -1,0 +1,236 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #080808;
+    color: white;
+    text-align: center;
+    font-family: IBM Plex Mono;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1%;
+}
+
+/* Navigation Bar  */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #1B1B1B;
+    width: 1110px;
+    height: 70px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-left: 70px;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 70px;
+    opacity: 0.4;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-links a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #FFFFFF;
+    opacity: 0.3;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    position: relative;
+    text-align: left;
+    color: white;
+    display: flex;
+    gap: 15%;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    line-height: 30px;
+    color: #9C9C9C;
+}
+
+.bt {
+    background-color: #3F8E00;
+    color: white;
+    padding: 21px 64px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    font-weight: 500;
+    border: 1px solid #62BA1B;
+    box-shadow: 0px 8px 30px 0px #3F8E0080;
+    word-spacing: 3px;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+
+}
+
+/* partners section */
+.partners {
+    margin: 0px 150px;
+}
+
+.partners h3 {
+    text-align: left;
+    font-weight: 400;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.logos img {
+    width: 150px;
+    border: 1px solid #1B1B1B
+}
+
+/* case-studies section */
+
+.case-studies {
+    background-color: #f9f9f9;
+}
+
+.case-studies h2 {
+    padding-top: 50px;
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.case-studies p {
+    color: #9C9C9C;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+
+.case-content {
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.case-content img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+.case-text {
+    text-align: left;
+}
+
+.case-text h3 {
+    color: #080808;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.case-text p {
+    color: #9C9C9C;
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.tag {
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 60px;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+
+.fintech {
+    background: #FFF6E9;
+    color: #FFA217;
+}
+
+.edtech {
+    background: #D0E6FF;
+    color: #007BFF;
+}
+
+.pharx {
+    background: #E0FFF8;
+    color: #2AB090;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn.yellow {
+    background: #FFA217;
+    box-shadow: 0px 8px 30px 0px #2AB0901A;
+    color: white;
+}
+
+.btn.blue {
+  
+    background: #000AFF;
+    box-shadow: 0px 8px 30px 0px #000AFF1A;
+    color: white;
+}
+
+.btn.green {
+    background: #2AB090;
+    box-shadow: 0px 8px 30px 0px #2AB0901A;
+    color: white;
+}
+@media screen and (max-width:480px){
+    .navbar ul{
+        flex-direction:column; 
+    }
+    .hero{
+        flex-direction:column;
+    }
+    
+}
