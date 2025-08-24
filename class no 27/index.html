@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        let text1 = "Hello";
+        let text2 = "World!";
+        let text3 = text1.concat(" ", text2);
+        document.getElementById("demo").innerHTML = text3;
+
+        let text = "I am Wajeeha ";
+        let result = text.repeat(4);
+        document.getElementById("demo1").innerHTML = result;
+
+        let newText = text.replace("Wajeeha", "Programmer");
+        document.getElementById("demo2").innerHTML = newText;
+
+        const myArr = text.split(" ");
+        for (let i = 0; i < myArr.length; i++) {
+            text += myArr[i] + "<br>"
+        }
+        document.getElementById("demo3").innerHTML = text;
+        // let username = prompt("Enter your Name")
+        // let age =prompt("Enter your age")
+        // if (age <= 18){
+        //     console.log(`You are not adult ${username} your are just ${age} years old`)
+        // }else{
+        //     console.log("You are adult",username, "your are ",age,"years old")
+        // }
+        // let text = "I am Wajeeha Arif"
+        // console.log(text.length)
+        // console.log(text.toUpperCase())
+        // for (let i = 0; i < text.length; i++ ){
+        //     console.log(text.charAt(i))
+        // }
+        // console.log(text[0] = "you")
+        // console.log(text.slice(5, 12))
+    </script>
+</body>
+
+</html>
