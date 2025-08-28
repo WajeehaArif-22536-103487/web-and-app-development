@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="card"></h1>
+    <script>
+        // const promise = new Promise((resolve , reject)=>{
+        //   success=true
+        //   if (success){
+        //     resolve("Resolved")
+        //   }else{
+        //     reject("Rejected")
+        //   }
+        // })
+        // promise.then((result)=>{
+        //     console.log(result)
+        // }).catch((error)=>{
+        //     console.log(error)
+        // })
+
+        // pending
+        // fullfilled
+        // rejected
+
+        fetch('https://fakestoreapi.com/products/1').then((result) => {
+            return result.json()
+        }).then((result) => {
+            result.map((value, index) =>{
+                const card = document.getElementById("card")
+                card.innerHTML = `<h1>${value.title}<h1>`
+            })
+        }).catch((error) => {
+            console.log(error)
+        })
+
+        // status is 200 if we get data 
+        // type : cors
+        // headers
+
+    </script>
+</body>
+
+</html>

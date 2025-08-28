@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        localStorage.setItem("name", "Wajeeha Arif");
+        localStorage.setItem("email", "Wajeeha Arif");
+        localStorage.setItem("password", "Wajeeha Arif");
+        localStorage.removeItem("name")
+        localStorage.clear()
+
+        const ages = [32, 33, 16, 40, 25, 12, 50, 12];
+        document.getElementById("demo").innerHTML = ages.filter((age) => age >= 18);
+    </script>
+</body>
+
+</html>

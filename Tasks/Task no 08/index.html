@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <style>
+        body h2 {
+            text-align: center;
+            background-color: palegreen;
+            padding-block: 20px;
+        }
+
+        p {
+            margin-left: 50px;
+        }
+
+        div {
+            margin: 50px;
+            border: 2px solid burlywood;
+            background-color: rgb(255, 240, 222);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="card-1">
+        <h2><u>Problem no_01</u></h2>
+        <p id="input-1"></p>
+        <p id="output-1"></p>
+    </div>
+    <div id="card-2">
+        <h2><u>Problem no_02</u></h2>
+        <p id="input-2"></p>
+        <p id="output-2"></p>
+    </div>
+    <div id="card-3">
+        <h2><u>Problem no_03</u></h2>
+        <p id="input-3"></p>
+        <p id="output-3"></p>
+    </div>
+    <div id="card-4">
+        <h2><u>Problem no_04</u></h2>
+        <p id="input-4"></p>
+        <p id="output-4"></p>
+    </div>
+    <div id="card-5">
+        <h2><u>Problem no_05</u></h2>
+        <p id="input-5"></p>
+        <p id="output-5"></p>
+    </div>
+    <script>
+        let input = "how are you"
+        document.getElementById('input-1').innerHTML += "<h3><i>Capitalize the First Letter: <br></i><h3>" + input
+        var output = input.split(" ");
+
+        for (var i = 0; i < output.length; i++) {
+            output[i] = output[i].charAt(0).toUpperCase() + output[i].slice(1)
+        }
+        document.getElementById('output-1').innerHTML += "<h3><i>After capitalization:</i> <br></h3>" + output
+
+        input = "HelloWorld"
+        document.getElementById('input-2').innerHTML += " <h3><i>Remove a Character:</i><br><h3> " + input
+        output = input.slice(1, 5) + input.slice(5, 9);
+        document.getElementById('output-2').innerHTML += "<h3><i>After removing:</i><br></h3>" + output
+
+        let text = "code";
+        document.getElementById('input-3').innerHTML += " <h3><i>Iterate Over String Characters:</i><br><h3> " + text
+        let result = "";
+
+        for (let i = 0; i < text.length; i++) {
+            result += text[i] + "<br>";
+        }
+        document.getElementById("output-3").innerHTML += "<h3><i>After iterate:</i><br></h3>" + result
+
+        document.getElementById("input-4").innerHTML += "<h3><i>Takes a string and a number n, and returns the last n characters of the string:</i><br></h3>" + "<h3>(String:developer,Number:4)</h3>"
+        function getLastNChars(str, n) {
+            return str.slice(-n);
+        }
+        output = getLastNChars("developer", 4)
+        document.getElementById("output-4").innerHTML += "<h3><i>After: </i><br></h3>" + output
+
+        document.getElementById("input-5").innerHTML += "<h3><i>Count Words in a String :<br><br>JavaScript is fun to learn</i></h3>"
+        function countWords(sentence) {
+            const words = sentence.trim().split(/\s+/);
+            return sentence.trim() === '' ? 0 : words.length;
+        }
+
+        output = (countWords("JavaScript is fun to learn"));
+        document.getElementById("output-5").innerHTML += "<h3><i>Total Words:</i><br></h3>" + output
+
+    </script>
+</body>
+
+</html>

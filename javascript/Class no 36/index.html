@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- react is a library for website , next js
+    react native for app -->
+    <!-- node js ,firebase  --> 
+     <script>
+        data = 20 ;
+        function move(callback){
+            data = 30 
+            console.log(data , callback)
+        }
+        function callback(){
+            // console.log("hello")
+            return "hello"
+        }
+        // var data
+        // console.log(data)
+        move(callback())
+        
+        // function first() {
+        //     console.log("first function")
+        // }
+        // function second() {
+        //     console.log("Second function")
+          
+        // }
+        // function third() {
+        //     console.log("Third function")
+        // }
+        // first(second(third()))
+
+
+        
+        function first(seccond) {
+            return "second"
+        }
+        function second(value) {
+            return value
+        }
+        function third() {
+           return "third"
+        }
+         first(second(third()))
+     </script>
+</body>
+</html>

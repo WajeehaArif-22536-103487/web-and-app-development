@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Grades</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input {
+      margin-right: 10px;
+    }
+    ul {
+      padding: 0;
+      margin-top: 20px;
+    }
+    li {
+      padding: 10px;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .failing {
+      background-color: rgb(247, 42, 42);
+    }
+    .average {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    button {
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <h2>Student Grade Manager</h2>
+  <input type="text" id="nameInput" placeholder="Student Name">
+  <input type="number" id="marksInput" placeholder="Marks">
+  <button onclick="addStudent()">Add Student</button>
+  <h2>Student list:</h2>
+  <ul id="studentList"></ul>
+
+  <div class="average" id="averageDisplay">Average : N/A</div>
+
+  <script>
+    const studentList = document.getElementById("studentList");
+    const averageDisplay = document.getElementById("averageDisplay");
+    let students = [];
+
+    function addStudent() {
+      const name = document.getElementById("nameInput").value.trim();
+      const marks = parseFloat(document.getElementById("marksInput").value);
+
+      if (!name || isNaN(marks)) {
+        alert("Please enter valid name and marks.");
+        return;
+      }
+
+      students.push({ name, marks });
+      updateList();
+      document.getElementById("nameInput").value = '';
+      document.getElementById("marksInput").value = '';
+    }
+
+    function deleteStudent(index) {
+      students.splice(index, 1);
+      updateList();
+    }
+
+    function updateList() {
+      studentList.innerHTML = '';
+
+      students.forEach((student, index) => {
+        const li = document.createElement("li");
+        if (student.marks < 40) {
+          li.classList.add("failing");
+        }
+
+        li.innerHTML = `
+          <div class="student-info">${student.name} - ${student.marks} </div>
+          <button onclick="deleteStudent(${index})">Delete</button>
+        `;
+
+        studentList.appendChild(li);
+      });
+
+      updateAverage();
+    }
+
+    function updateAverage() {
+      if (students.length === 0) {
+        averageDisplay.textContent = "Average Grade: N/A";
+        return;
+      }
+      const total = students.reduce((sum, student) => sum + student.marks, 0);
+      const avg = (total / students.length).toFixed(2);
+      averageDisplay.textContent = `Average Grade: ${avg}`;
+    }
+  </script>
+
+</body>
+</html> 
+
+  

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <button onclick="fullmame()" >submit</button>
+    <script>
+        // const person = {
+
+        // }
+        // console.log(person)
+        // person.name = "Wajeeha"
+        // person.rollno = 25
+        // console.log(person)
+        // console.log(this)
+        const person = {
+            firstName : "Wajeeha",
+            lastName : "Arif",
+            rollno : 25,
+            fullname : function(){
+               return this.firstName + " " + this.lastName
+            },
+        };
+         document.getElementById ("demo").innerHTML = person. firstName
+         document.getElementById ("demo1").innerHTML = person. lastName
+         document.getElementById ("demo2").innerHTML = person. rollno
+
+
+    </script>
+</body>
+
+</html>

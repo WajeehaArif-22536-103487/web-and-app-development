@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        .post {
+            border: 1px solid #ddd;
+            padding-block: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            justify-self:center;
+        }
+
+        .header {
+            display: flex;
+        }
+
+        .header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+        .header p{
+            justify-content: center;
+            align-items: center;
+        }
+        .header i{
+            padding-left: 70px;
+            padding-top: 20px;
+        }
+        .section_image img {
+            width: 250px;
+            height: 250px;
+        }
+        .footer i{
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="post">
+        <div class="header">
+            <img src="../Class no 17/imges/profile pic.png" alt="">
+            <p>Djaksldj aljd</p>
+            <i class="fa fa-solid fa-ellipsis"></i>
+        </div>
+        <div class="section_image">
+            <img src="../Class no 8/php-projects-1024x683.jpg" alt="">
+        </div>
+        <div class="footer">
+            <i onclick=changeColor(this) class="fa fa-regular fa fa-heart"></i>
+            <i class="fa fa-regular fa-comment"></i>
+            <i class="fa-regular fa-paper-plane"></i>
+        </div>
+    </div>
+    <script>
+        function changeColor(x){
+           x.classList.toggle("fa fa-solid fa fa-heart");
+        }
+    </script>
+</body>
+
+</html

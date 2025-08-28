@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+    }
+
+    .container {
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    h1,h2 {
+      color: #00796b;
+      padding-left: 10px;
+      margin-top: 30px;
+    }
+    u{
+      color:#00796b
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 8px 0;
+    }
+
+    #output,
+    #user-container,
+    #output-01,
+    #output-02,
+    #output-03 {
+      background-color: #f0fdfc;
+      padding: 15px;
+      margin-top: 10px;
+      font-family: monospace;
+      /* box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05); */
+    }
+
+
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    <u><h1>Import and export in js</h1></u>
+    <h2>Full Name Output</h2>
+    <div id="output"></div>
+    <h2>User List (from API)</h2>
+    <div id="user-container"></div>
+    <h2>Spread operater with object</h2>
+    <div id="output-01"></div>
+    <h2>Spread operater with array</h2>
+    <div id="output-02"></div>
+    <h2>Spread operater with string </h2>
+    <div id="output-03"></div>
+    <script type="module" src="third.js"></script>
+    <script type="module">
+        // Original student object
+        const student = {
+            fullName: "Wajeeha Arif",
+            rollNo: 23,
+            grade: "A+"
+        };
+
+        // Destructuring with spread
+        let { ...studentInfo } = student;
+        // Display in browser
+        const outputDiv1 = document.getElementById('output-01');
+        // Option 1: Simple HTML with template literals
+        outputDiv1.innerHTML = `
+        <p><strong>Name:</strong> ${studentInfo.fullName}</p>
+        <p><strong>Roll No:</strong> ${studentInfo.rollNo}</p>
+        <p><strong>Grade:</strong> ${studentInfo.grade}</p>
+        `;
+
+        // Original color array
+        const colors = ["red", "green", "blue", "yellow"];
+        let [primary1, primary2, primary3, primary4, ...spread] = colors;
+        const outputDiv2 = document.getElementById('output-02');
+        const moreColors = [...colors, "gray", "brown"]
+        // Display values in the browser
+        outputDiv2.innerHTML = `
+        <p>Primary 1: ${primary1}</p>
+        <p>Primary 2: ${primary2}</p>
+        <p>Primary 3: ${primary3}</p>
+        <p>Primary 4: ${primary4}</p>
+        <p>Spread (extra): ${spread}</p>
+        <p>Array after adding more colors: ${moreColors}</p>
+        `;
+
+        const lang = "python";
+        let [firstLetter, ...restLetters] = lang;
+        // Display on the page
+        const outputDiv3 = document.getElementById('output-03');
+        outputDiv3.innerHTML = `
+        <p>First Letter: ${firstLetter}</p>
+        <p>Rest Letters: ${restLetters.join(", ")}</p>
+        `;
+    </script>
+ 
+</body>
+
+</html>

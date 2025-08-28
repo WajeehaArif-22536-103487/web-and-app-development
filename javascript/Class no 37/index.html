@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #demo2 {
+            font-size: 1rem;
+            text-align: center;
+            padding: 10px;
+            width: 100px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        button {
+            font-size: 1rem;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        #startBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #stopBtn {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <button id="startBtn" onclick="startCount()">Start count!</button>
+    <input  type="text" id="demo2" placeholder="seconds">
+    <button  id="stopBtn" onclick="stopCount()">Stop count!</button>
+    <script>
+        // function message(first) {
+        //     first_message()
+        //     first()
+        // }
+        // function first_message() {
+        //     console.log("This is first function")
+        // }
+        // message(first_message)
+
+        // function sum(a, b) {
+        //     console.log(b)
+        //     a()
+        // }
+        // function cal() {
+        //     console.log("sum is")
+        // }
+        // sum(cal, 20)
+
+        // console.log("first")
+        // console.log("second")
+        // setTimeout(() => {
+        //     function data() {
+        //         console.log("fourth")
+        //     }
+        //     data()
+        // }, 1000)
+        // console.log("third")
+
+        // function display(some) {
+        //     document.getElementById("demo").innerHTML = some;
+        // }
+        // function calculation(num1, num2, callback) {
+        //     let sum = num1 + num2
+        //     callback(sum)
+        // }
+        // calculation(4, 6, display)
+
+
+
+        // // Create an Array
+        // const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+
+        // // Call removeNeg with a Callback
+        // const posNumbers = removeNeg(myNumbers, (x) => x >= 0);
+
+        // // Display Result
+        // document.getElementById("demo1").innerHTML = posNumbers;
+
+        // // Remove negative numbers
+        // function removeNeg(numbers, callback) {
+        //     const myArray = [];
+        //     for (const x of numbers) {
+        //         if (callback(x)) {
+        //             myArray.push(x);
+        //         }
+        //     }
+        //     return myArray;
+        // }
+
+
+        let counter = 0;
+        let timeout;
+        let timer_on = 0;
+
+        function timedCount() {
+            document.getElementById("demo2").value = counter +" "+"second";
+            counter++;
+            timeout = setTimeout(timedCount, 1000);
+        }
+
+        function startCount() {
+            if (!timer_on) {
+                timer_on = 1;
+                timedCount();
+            }
+        }
+
+        function stopCount() {
+            clearTimeout(timeout);
+            timer_on = 0;
+        }
+
+        // function greet(name, myFunction) {
+        //     console.log('Hello world');
+
+        //     // callback function
+        //     // executed only after the greet() is executed
+        //     myFunction(name);
+        // }
+
+        // // callback function
+        // function sayName(name) {
+        //     console.log('Hello' + ' ' + name);
+        // }
+
+        // // calling the function after 2 seconds
+        // setTimeout(greet, 2000, 'John', sayName);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 20px);
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="card">
+        <div id="id"></div>
+        <div id="heading"></div>
+        <div id="price"></div>
+        <div id="description"></div>
+        <div id="category"></div>
+        <div id="image"></div>
+    </div>
+    <div id="demo"></div>
+    <script>
+        const productData = [
+            {
+                "id": 1,
+                "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+                "price": 109.95,
+                "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+                "category": "men's clothing",
+                "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+            },
+            {
+                "id": 2,
+                "title": "Mens Casual Premium Slim Fit T-Shirts ",
+                "price": 22.3,
+                "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+                "category": "men's clothing",
+                "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+            },
+        ];
+        const product = productData[0]
+        const id = document.getElementById('id')
+        id.innerHTML = `<h3>${product.id}</h3>`
+        const heading = document.getElementById('heading')
+        heading.innerHTML = `<p>${product.title}</p>`
+        const price = document.getElementById('price')
+        price.innerHTML = `<p>${product.price}</p>`
+        const description = document.getElementById('description')
+        description.innerHTML = `<p>${product.description}</p>`
+        const category = document.getElementById('category')
+        category.innerHTML = `<p>${product.category}</p>`
+        const image = document.getElementById('image')
+        image.innerHTML = `<p>${product.image}</p>`
+
+        let text = "";
+        let i = 0;
+        while (i < 10) {
+            text += "<br>The number is " + i;
+            i++;
+        }
+        document.getElementById('demo').innerHTML = text
+    </script>
+    </script>
+</body>
+
+</html>
